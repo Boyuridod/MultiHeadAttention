@@ -25,11 +25,25 @@ def getTransposta(x):
     return y
     
 def multMatriz(x, y):
-    mult = []
-    for i in range(len(x[0])):
-        mult.append([])
-        for j in range(len(y)):
-            for k in range(len(x)):
+    if len(x[0]) != len(y):  
+        raise ValueError("Número de colunas de x deve ser igual ao número de linhas de y.")
+
+    # Criando a matriz resultante com zeros
+    mult = [[0] * len(y[0]) for _ in range(len(x))]
+
+    # Multiplicação correta das matrizes
+    for i in range(len(x)):  # Itera sobre as linhas da matriz x
+        for j in range(len(y[0])):  # Itera sobre as colunas da matriz y
+            for k in range(len(y)):  # Itera sobre os elementos da multiplicação
                 mult[i][j] += x[i][k] * y[k][j]
 
     return mult
+
+def criaMatriz(x, y):
+    matriz = []
+    for i in range(x):
+        matriz.append([])
+        for j in range(y):
+            matriz[i].append(1)
+
+    return matriz

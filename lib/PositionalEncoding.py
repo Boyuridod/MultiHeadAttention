@@ -7,9 +7,9 @@ def PositionalEncoding(x, dmodel):
         positionalEncoding.append([])
         for j in range(dmodel):
             if(x % 2 == 0):
-                positionalEncoding.append(sin(i/expon(10000, j / dmodel)))
+                positionalEncoding[i].append(sin(i/expon(10000, j / dmodel)))
             else:
-                positionalEncoding.append(cos(i/expon(10000, j / dmodel)))
+                positionalEncoding[i].append(cos(i/expon(10000, j / dmodel)))
                 
     return positionalEncoding
 
