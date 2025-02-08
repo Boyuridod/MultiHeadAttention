@@ -1,3 +1,9 @@
+# Lembrete
+
+Vale lembrar que todos os vídeos as pessoas estão ensinando que inputEmbedding e PositionalEncoding tem [n] colunas e [dmodel] linhas,
+sendo que na verdade estas matrizes tem [n] linhas e [dmodel] colunas. Porque?
+Porque na verdade estas matrizes são [n] [vetores] cada um com [dmodel] elementos
+
 # Referências
 
 1. VASWANI, Ashish et al. *Attention Is All You Need*, 2023. Acesso em: 7 fev. 2025.
